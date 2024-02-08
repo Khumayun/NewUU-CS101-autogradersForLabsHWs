@@ -31,4 +31,4 @@ if __name__ == "__main__":
 	print('\n\n\nRESULTS:')
 	print(f'EXECUTION TIME: {results["execution_time"]}')
 	for i, testcase in enumerate(results['tests']):
-		print(f'TEST {testcase["name"]}: {testcase["score"]}/{testcase["max_score"]} points! {testcase["output"]}')
+		print(f'TEST {testcase["name"]}: {testcase["score"]}/{testcase["max_score"]} points!')
