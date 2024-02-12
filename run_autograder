@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 
-echo "Installing apt dependencies..."
-apt-get install -y python3 python3-pip python3-dev
+#echo "Installing apt dependencies..."
+#apt-get install -y python3 python3-pip python3-dev
+#
+#echo "Installing python3 dependencies..."
+#pip3 install -r /autograder/requirements.txt
+#
+#echo "Installing Gradescope dependencies..."
+#cd /autograder/GradescopeBase-master
+#python3 setup.py install
+#cd ../
 
-echo "Installing python3 dependencies..."
-pip3 install -r /autograder/requirements.txt
-
-echo "Installing Gradescope dependencies..."
-cd /autograder/GradescopeBase-master
-python3 setup.py install
-cd ../
+## uncomment everything above and comment one line bellow to run locally
+cd source
 
 python3 main.py
 
+# this line bellow is for creating docker containter with autograder, and two folders are mounted.
 ## docker run -it --rm -v /Users/k.aminaddinov/Documents/NewUU/CS101_Spring2024-25/Labs/autograders/sampleAutograder:/autograder -v /Users/k.aminaddinov/Documents/NewUU/CS101_Spring2024-25/Labs/autograders/sampleAutograder/results:/autograder/results -e "IS_LOCAL=true" gradescope/autograder-base bash
