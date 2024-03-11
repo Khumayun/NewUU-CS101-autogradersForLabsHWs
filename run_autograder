@@ -17,4 +17,4 @@ cd source
 python3 main.py
 
 # this line bellow is for creating docker containter with autograder, and two folders are mounted.
-## docker run -it --rm -v /Users/k.aminaddinov/Documents/NewUU/CS101_Spring2024-25/Labs/autograders/sampleAutograder:/autograder -v /Users/k.aminaddinov/Documents/NewUU/CS101_Spring2024-25/Labs/autograders/sampleAutograder/results:/autograder/results -e "IS_LOCAL=true" gradescope/autograder-base bash
+## docker run -it --rm -v /Users/khumoyunaminaddinov/PycharmProjects/NewUU/NewUU-CS101-autogradersForLabsHWs:/autograder -v /Users/khumoyunaminaddinov/PycharmProjects/NewUU/NewUU-CS101-autogradersForLabsHWs/results:/autograder/results -e "IS_LOCAL=true" gradescope/autograder-base bash

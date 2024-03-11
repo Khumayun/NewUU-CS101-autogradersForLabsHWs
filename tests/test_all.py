@@ -23,8 +23,8 @@ INPUTS_FOR_CIN = [
 	"15", "11",
 	"172", "5.8"
 ]
-STUDENT_SUBMISSION = f"{root_dir()}/submission/main.cpp"
-TRUE_RESULT = f"{root_dir()}/tests/solutions/truemain.cpp"
+STUDENT_SUBMISSION = f"/autograder/submission/main.cpp"
+TRUE_RESULT = f"/autograder/source/tests/solutions/truemain.cpp"
 
 COMPILED_STUDENT_SUBMISSION = os.system(
 	f"g++ -c {STUDENT_SUBMISSION} && g++ -o main main.o")
