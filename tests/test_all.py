@@ -11,15 +11,15 @@ PROBLEM_NO = PROBLEM_NO.split('_')[1].split('.')[0][1:]
 INPUTS_FOR_CIN = [
 	"38", "73",
 	"2", "5",
-	"3.45",
+	"6.9",
 	"3", "7", "2",
 	"900.5", "25.5", "3.55",
 	"5.5",
-	"20",
+	"31",
 	"2", "3",
-	"55", "14",
-	"5", "14", "8",
-	"-6", "-3", "-2", "1", "0",
+	"143", "93",
+	"15", "114", "38",
+	"-16", "-1", "-35", "51", "0",
 	"15", "11",
 	"172", "5.8"
 ]
@@ -41,7 +41,6 @@ def manualTest(studentResult, trueResult):
 			return False
 	return True
 
-
 @Test(f"Problem 1", 2)
 def is_valid(ag: Autograder, test: AutograderTest):
 
@@ -57,7 +56,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[0] == trueResult[0])
+	is_correct = (studentResult[0].lower().strip() == trueResult[0].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -81,7 +80,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (len(studentResult[1].split('\n')) == len(trueResult[1].split('\n')))
+	is_correct = (len(studentResult[1].lower().strip().split('\n')) == len(trueResult[1].lower().strip().split('\n')))
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -105,7 +104,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[2] == trueResult[2])
+	is_correct = (studentResult[2].lower().strip() == trueResult[2].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -129,7 +128,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[3] == trueResult[3])
+	is_correct = (studentResult[3].lower().strip() == trueResult[3].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -153,7 +152,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[4] == trueResult[4])
+	is_correct = (studentResult[4].lower().strip() == trueResult[4].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -178,7 +177,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[5] == trueResult[5])
+	is_correct = (studentResult[5].lower().strip() == trueResult[5].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -204,7 +203,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[6] == trueResult[6])
+	is_correct = (studentResult[6].lower().strip() == trueResult[6].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -228,7 +227,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[7] == trueResult[7])
+	is_correct = (studentResult[7].lower().strip() == trueResult[7].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -252,7 +251,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[8] == trueResult[8])
+	is_correct = (studentResult[8].lower().strip() == trueResult[8].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -276,7 +275,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[9] == trueResult[9])
+	is_correct = (studentResult[9].lower().strip() == trueResult[9].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -300,7 +299,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[10] == trueResult[10])
+	is_correct = (studentResult[10].lower().strip() == trueResult[10].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -324,7 +323,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[11] == trueResult[11])
+	is_correct = (studentResult[11].lower().strip() == trueResult[11].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -348,7 +347,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[12] == trueResult[12])
+	is_correct = (studentResult[12].lower().strip() == trueResult[12].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -372,7 +371,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[13] == trueResult[13])
+	is_correct = (studentResult[13].lower().strip() == trueResult[13].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -396,7 +395,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[14] == trueResult[14])
+	is_correct = (studentResult[14].lower().strip() == trueResult[14].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -420,7 +419,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[15] == trueResult[15])
+	is_correct = (studentResult[15].lower().strip() == trueResult[15].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -444,7 +443,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[16] == trueResult[16])
+	is_correct = (studentResult[16].lower().strip() == trueResult[16].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -468,7 +467,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[17] == trueResult[17])
+	is_correct = (studentResult[17].lower().strip() == trueResult[17].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -492,7 +491,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[18] == trueResult[18])
+	is_correct = (studentResult[18].lower().strip() == trueResult[18].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -516,7 +515,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[19] == trueResult[19])
+	is_correct = (studentResult[19].lower().strip() == trueResult[19].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -540,7 +539,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[20] == trueResult[20])
+	is_correct = (studentResult[20].lower().strip() == trueResult[20].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
@@ -564,7 +563,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 
 	studentResult = re.split(r'PROBLEM \d+\n', output_student.decode('utf-8'))
 	trueResult = re.split(r'PROBLEM \d+\n', output_true.decode('utf-8'))
-	is_correct = (studentResult[21] == trueResult[21])
+	is_correct = (studentResult[21].lower().strip() == trueResult[21].lower().strip())
 
 	if is_correct == 0:
 		test.print("Your solution don't pass the test!")
