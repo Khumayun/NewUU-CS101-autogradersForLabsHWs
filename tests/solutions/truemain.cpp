@@ -5,7 +5,6 @@
 using namespace std;
 
 int main() {
-
     cout << "PROBLEM 1\n";
 
     int intNumber = 23;
@@ -14,11 +13,11 @@ int main() {
     char charName = 'A';
     bool boolean = true;
 
-    cout << "Value of Integer is " << intNumber << ". " << "Size is " << sizeof(intNumber)<< endl;
-    cout << "Value of Float is " << floatNumber << ". " << "Size is " << sizeof(floatNumber)<< endl;
-    cout << "Value of Double is " << doubleNumber << ". " << "Size is " << sizeof(doubleNumber)<< endl;
-    cout << "Value of Char is " << charName << ". " << "Size is " << sizeof(charName)<< endl;
-    cout << "Value of Bool is " << boolean << ". " << "Size is " << sizeof(boolean)<< endl;
+    cout << "Value of Integer is " << intNumber << ". " << "Size is " << sizeof(intNumber) << endl;
+    cout << "Value of Float is " << floatNumber << ". " << "Size is " << sizeof(floatNumber) << endl;
+    cout << "Value of Double is " << doubleNumber << ". " << "Size is " << sizeof(doubleNumber) << endl;
+    cout << "Value of Char is " << charName << ". " << "Size is " << sizeof(charName) << endl;
+    cout << "Value of Bool is " << boolean << ". " << "Size is " << sizeof(boolean) << endl;
 
     cout << "PROBLEM 2\n";
 
@@ -29,30 +28,30 @@ int main() {
 
     cout << "PROBLEM 3\n";
 
-    cout<<"\"The rain\" is raining all around,\n"
-          "\\It falls on field and tree\\\n"
-          "It rains on the umbrellas here,\n"
-          "And on the ships at sea.\n"
-          "\'Rain\'\t Robert Louis Stevenson"<<endl;
+    cout << "\"I\'m standing\" on the edge of some crazy cliff.\n"
+            "What I have to do, I have to catch everybody\\\n"
+            "if they start to go over the cliff—I mean\\\n"
+            "\\if they're running and they don't look\n"
+            "where they're going I have to come out\n"
+            "from somewhere and \tcatch them.";
 
     cout << "PROBLEM 4\n";
 
-    int a=151;
+    int a=189;
     char b='B';
     float c=(float)a/3;
     int d=(int)b;
     int e=a+(int)b;
     char f=(char)(a/10-1)+b;
-    cout<<c<<"\t"<<d<<"\t"<<e<<"\t"<<f<<endl;
+    cout << c << ' ' << d << ' ' << e << ' ' << f << endl;
 
     cout << "PROBLEM 5\n";
 
-    int a2=32;
-    int b2=48;
+    int a2=12;
+    int b2=38;
 
-    cout<<"Sum="<<a2+b2<<endl;
-    cout<<"Product="<<a2*b2<<endl;
-
+    cout << "Sum=" << a2+b2 << endl;
+    cout << "Product=" << a2*b2 << endl;
 
     cout << "PROBLEM 6\n";
 
@@ -60,7 +59,7 @@ int main() {
     cout<<"Enter two integer numbers:"<<endl;
     cin>>a3>>b3;
 
-    cout<<"Sum:"<<a3<<"+"<<b3<<"="<<a3+b3<<endl;
+    cout<<"Sum: "<<a3<<" + "<<b3<<" = "<<a3+b3<<endl;
 
     cout << "PROBLEM 7\n";
 
@@ -73,10 +72,9 @@ int main() {
     cout << "PROBLEM 8\n";
 
     float r;
-    cout<<"Enter the radius of the sphere:";
     cin>>r;
-
-    cout<<"Area:"<<4*3.14*r*r<<endl;
+    r/=2;
+    cout<<"Area: "<<4*3.14*r*r<<endl;
 
     cout << "PROBLEM 9\n";
 
@@ -86,11 +84,8 @@ int main() {
 
     cout << "PROBLEM 10\n";
     double a4, b4, c4;
-    cout << "Enter the driving distance: ";
     cin >> a4;
-    cout << "Enter the miles per gallon: ";
     cin >> b4;
-    cout << "Enter the price per gallon: ";
     cin >> c4;
     cout << "The cost of driving is $" << a4/b4*c4 << endl;
 
@@ -103,29 +98,27 @@ int main() {
 
     cout << "PROBLEM 11\n";
 
-    double x3=5.23e3;
-    double y3=25e-4;
+    double x3=1.13e3;
+    double y3=411e-4;
 
-    cout<<x3<<endl<<y3<<endl;
+    cout << x3 << ' ' << y3 << endl;
 
     cout << "PROBLEM 12\n";
 
     int total=241;
     int n=11;
-    cout<<"In first group:"<<total/n<<endl;
-    cout<<"In last group:"<<total%n<<endl;
+    cout << "In first group: " << total/n << endl;
+    cout << "In last group: " << total%n << endl;
 
     cout << "PROBLEM 13\n";
 
     double a5;
-    cout << "Enter the length of the side: ";
     cin >> a5;
     cout << "The area of the hexagon is " << 3*1.73/2*a5*a5 << endl;
 
     cout << "PROBLEM 14\n";
 
     int num;
-    cout<<"Enter a number:";
     cin>>num;//20
 
     num++; //21
@@ -134,6 +127,7 @@ int main() {
     num/=2; //61
     num--; // 60
     num %=5; //0
+    cout << num << endl;
 
     cout << "PROBLEM 15\n";
 
@@ -152,10 +146,10 @@ int main() {
 
     cout << "PROBLEM 16\n";
 
-    float x4=13;
+    float x4=17;
     float y4=1;
 
-    float z=(x4++ + x4)/(++y4*(y4)*++y4);
+    float z=(x4++ + x4)/(++y4*(++y4));
     cout<<z<<endl;
 
     cout << "PROBLEM 17\n";
@@ -168,8 +162,7 @@ int main() {
 
     int a7,b7;
     cin>>a7>>b7;
-    cout<<(a7<50)<<endl;
-    cout<<(a7<b7)<<endl;
+    cout << ((a7<50) && (a7<b7)) << endl;
 
     cout << "PROBLEM 19\n";
 
@@ -194,9 +187,7 @@ int main() {
     cout << "PROBLEM 22\n";
 
     float a12,b12;
-    cout<<"Sardor in cm.:";
     cin>>a12;
-    cout<<"Mike in ft.:";
     cin>>b12;
     cout<<(b12*30.48>a12) << endl;
 
