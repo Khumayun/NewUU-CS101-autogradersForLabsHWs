@@ -27,5 +27,6 @@ if __name__ == "__main__":
     autograder = Autograder(rate_limit=rlim)
     autograder.import_tests(tests_dir="tests", blacklist=["__init__.py", "lib.py"])
     autograder.run()
-    # autograder.run_tests()
-    # results = autograder.generate_results()
+    autograder.run_tests()
+    results = autograder.generate_results()
+    showResults(results)
