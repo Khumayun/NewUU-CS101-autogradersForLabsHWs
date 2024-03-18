@@ -10,10 +10,14 @@
 #cd GradescopeBase-master
 #python3 setup.py install
 #cd ../
-
+echo "pwd"
+pwd
+echo "ls"
+ls
 ## uncomment everything above and comment one line bellow to run locally
 cd source
-
+echo "cd source ls"
+ls
 python3 main.py
 
 # this line bellow is for creating docker containter with autograder, and two folders are mounted.

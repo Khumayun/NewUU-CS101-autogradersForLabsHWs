@@ -1,5 +1,5 @@
 //
-// Created by Khumoyun Aminaddinov on 08/02/24.
+// Created by Khumoyun Aminaddinov 08/02/2024
 //
 #include <iostream>
 using namespace std;
@@ -41,7 +41,7 @@ int main() {
     char b='B';
     float c=(float)a/3;
     int d=(int)b;
-    int e=a+(int)b;
+    int e=(a+(int)b)/5;
     char f=(char)(a/10-1)+b;
     cout << c << ' ' << d << ' ' << e << ' ' << f << endl;
 
@@ -56,7 +56,6 @@ int main() {
     cout << "PROBLEM 6\n";
 
     int a3,b3;
-    cout<<"Enter two integer numbers:"<<endl;
     cin>>a3>>b3;
 
     cout<<"Sum: "<<a3<<" + "<<b3<<" = "<<a3+b3<<endl;
@@ -94,14 +93,7 @@ int main() {
     double x2=5.23e3;
     double y2=25e-4;
 
-    cout<<x2<<endl<<y2<<endl;
-
-    cout << "PROBLEM 11\n";
-
-    double x3=1.13e3;
-    double y3=411e-4;
-
-    cout << x3 << ' ' << y3 << endl;
+    cout << x2 << ' ' << y2 << endl;
 
     cout << "PROBLEM 12\n";
 
