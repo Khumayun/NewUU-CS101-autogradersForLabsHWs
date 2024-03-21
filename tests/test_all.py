@@ -9,11 +9,11 @@ PROBLEM_NO = os.path.basename(__file__)
 PROBLEM_NO = PROBLEM_NO.split('_')[1].split('.')[0][1:]
 
 INPUTS_FOR_CIN = [
-	"5", "15",
-	"2", "3",
-	"36.6",
-	"10", "20", "9"
-	"5"
+	"29.9",
+	"328", "23", "92",
+	"F", "1.65",
+	"18:20:3F:20:AB:11",
+	"5", "+", "42"
 ]
 
 STUDENT_SUBMISSION = f"{root_dir()}/submission/main.cpp"
@@ -56,6 +56,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 		test.print("Correct solution!")
 	return True
 
+
 @Test(f"Problem 2", 2)
 def is_valid(ag: Autograder, test: AutograderTest):
 
@@ -79,6 +80,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 	else:
 		test.print("Correct solution!")
 	return True
+
 
 @Test(f"Problem 3", 2)
 def is_valid(ag: Autograder, test: AutograderTest):
@@ -104,6 +106,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 		test.print("Correct solution!")
 	return True
 
+
 @Test(f"Problem 4", 2)
 def is_valid(ag: Autograder, test: AutograderTest):
 
@@ -127,6 +130,7 @@ def is_valid(ag: Autograder, test: AutograderTest):
 	else:
 		test.print("Correct solution!")
 	return True
+
 
 @Test(f"Problem 5", 2)
 def is_valid(ag: Autograder, test: AutograderTest):
