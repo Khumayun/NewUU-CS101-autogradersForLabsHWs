@@ -1,204 +1,77 @@
 //
-// Created by Khumoyun Aminaddinov on 08/02/24.
-//
+// Created by ...
+// Date:
+
 #include <iostream>
+#include <cmath>
+
 using namespace std;
 
 int main() {
-
     cout << "PROBLEM 1\n";
 
-    int intNumber = 23;
-    float floatNumber = 3.14;
-    double doubleNumber = 45.1234;
-    char charName = 'A';
-    bool boolean = true;
+    //declaring and initializing variables
+    int num1, num2; // initializing integers to 0 for storing numbers
+    int avg, product; // initializing integers to 0 for storing results
 
-    cout << "Value of Integer is " << intNumber << ". " << "Size is " << sizeof(intNumber)<< endl;
-    cout << "Value of Float is " << floatNumber << ". " << "Size is " << sizeof(floatNumber)<< endl;
-    cout << "Value of Double is " << doubleNumber << ". " << "Size is " << sizeof(doubleNumber)<< endl;
-    cout << "Value of Char is " << charName << ". " << "Size is " << sizeof(charName)<< endl;
-    cout << "Value of Bool is " << boolean << ". " << "Size is " << sizeof(boolean)<< endl;
+    cin>>num1;
+    cin>>num2;
+
+    avg=(num1+num2)/2; //add numbers and store result into sum
+    product=num1*num2; //multiply numbers and store result into product
+
+    //display sum and multiplication result
+    cout<<"The result of average is equal to "<<avg<<endl;
+    cout<<"The result of product is equal to "<<product<<endl;
 
     cout << "PROBLEM 2\n";
 
-    cout << "Khumoyun Aminaddinov" << endl;
-    cout << "23423" << endl;
-    cout << "Romeo and Juliet op.64" << endl;
-    cout << "Cars" << endl;
+    double base, height;
+
+    // Prompt the user to input the length of the base
+    cin >> base;
+    cin >> height;
+
+    // Calculate the area of the triangle
+    double area = 0.5 * base * height;
+
+    // Display the calculated area
+    cout << "The area of the triangle is: " << area << " square units" << endl;
 
     cout << "PROBLEM 3\n";
+    //declaring and initializing variables
+    float tempC; // initializing float to 0 for storing Celsius temperature
+    float tempF; // initializing float to 0 for storing Fahrenheit temperature
 
-    cout<<"\"The rain\" is raining all around,\n"
-          "\\It falls on field and tree\\\n"
-          "It rains on the umbrellas here,\n"
-          "And on the ships at sea.\n"
-          "\'Rain\'\t Robert Louis Stevenson"<<endl;
+    cin>>tempC; //read Celsius temperature from user
+
+    tempF=tempC*1.8+32; //calculateFahrenheit temperature
+
+    cout<<"The temperature in Farenheit is equal to "<<tempF<<endl; //display Fahrenheit temperature
 
     cout << "PROBLEM 4\n";
 
-    int a=151;
-    char b='B';
-    float c=(float)a/3;
-    int d=(int)b;
-    int e=a+(int)b;
-    char f=(char)(a/10-1)+b;
-    cout<<c<<"\t"<<d<<"\t"<<e<<"\t"<<f<<endl;
+    long a, b, c, res;
+    cin >> a >> b >> c;
+
+    res = pow(pow(a, b), c);
+
+    cout << res << endl;
 
     cout << "PROBLEM 5\n";
 
-    int a2=32;
-    int b2=48;
-
-    cout<<"Sum="<<a2+b2<<endl;
-    cout<<"Product="<<a2*b2<<endl;
-
-
-    cout << "PROBLEM 6\n";
-
-    int a3,b3;
-    cout<<"Enter two integer numbers:"<<endl;
-    cin>>a3>>b3;
-
-    cout<<"Sum:"<<a3<<"+"<<b3<<"="<<a3+b3<<endl;
-
-    cout << "PROBLEM 7\n";
-
-    double t;
-    double x, y;
-    cin >> x >> y;
-    t = (2*(x*x+3))/(y/3+4);
-    cout << "t=" << t << endl;
-
-    cout << "PROBLEM 8\n";
-
-    float r;
-    cout<<"Enter the radius of the sphere:";
-    cin>>r;
-
-    cout<<"Area:"<<4*3.14*r*r<<endl;
-
-    cout << "PROBLEM 9\n";
-
-    float v0,v1,t1;
-    cin>>v0>>v1>>t1;
-    cout<<(v1-v0)/t1<<endl;
-
-    cout << "PROBLEM 10\n";
-    double a4, b4, c4;
-    cout << "Enter the driving distance: ";
-    cin >> a4;
-    cout << "Enter the miles per gallon: ";
-    cin >> b4;
-    cout << "Enter the price per gallon: ";
-    cin >> c4;
-    cout << "The cost of driving is $" << a4/b4*c4 << endl;
-
-    cout << "PROBLEM 11\n";
-
-    double x2=5.23e3;
-    double y2=25e-4;
-
-    cout<<x2<<endl<<y2<<endl;
-
-    cout << "PROBLEM 11\n";
-
-    double x3=5.23e3;
-    double y3=25e-4;
-
-    cout<<x3<<endl<<y3<<endl;
-
-    cout << "PROBLEM 12\n";
-
-    int total=241;
-    int n=11;
-    cout<<"In first group:"<<total/n<<endl;
-    cout<<"In last group:"<<total%n<<endl;
-
-    cout << "PROBLEM 13\n";
-
-    double a5;
-    cout << "Enter the length of the side: ";
-    cin >> a5;
-    cout << "The area of the hexagon is " << 3*1.73/2*a5*a5 << endl;
-
-    cout << "PROBLEM 14\n";
-
-    int num;
-    cout<<"Enter a number:";
-    cin>>num;//20
-
-    num++; //21
-    num*=6; //126
-    num-=4; //122
-    num/=2; //61
-    num--; // 60
-    num %=5; //0
-
-    cout << "PROBLEM 15\n";
-
-    char c5='A';
-    c5+=7;
-    cout<<c5;
-    c5-=3;
-    cout<<c5;
-    c5+=7;
-    cout<<c5<<c5;
-    c5+=3;
-    cout<<c5;
-    c5-=46;
-    cout<<c5;
-    cout<<endl;
-
-    cout << "PROBLEM 16\n";
-
-    float x4=13;
-    float y4=1;
-
-    float z=(x4++ + x4)/(++y4*(y4)*++y4);
-    cout<<z<<endl;
-
-    cout << "PROBLEM 17\n";
-
-    int a6,b6;
-    cin>>a6>>b6;
-    cout<<(a6==b6)<<endl;
-
-    cout << "PROBLEM 18\n";
-
-    int a7,b7;
-    cin>>a7>>b7;
-    cout<<(a7<50)<<endl;
-    cout<<(a7<b7)<<endl;
-
-    cout << "PROBLEM 19\n";
-
-    int a8,b8,c8;
-    cin>>a8>>b8>>c8;
-    cout<<((a8>b8)&&(a8>c8))<<endl;
-
-    cout << "PROBLEM 20\n";
-
-    int a9,b9,c9,d9,e9;
-    cin>>a9>>b9>>c9>>d9>>e9;
-    cout<<((a9>=0)||(b9>=0)||(c9>=0)||(d9>=0)||(e9>=0))<<endl;
-
-    cout << "PROBLEM 21\n";
-
-    int a11,b11;
-    cin>>a11>>b11;
-    cout<<((a11+b11>50)&&(a11*b11>50)) << ' ';
-    cout<<((a11+b11-10>50)||(a11*(b11-10)>50)) << ' ';
-    cout<<((a11>50)||(b11>50)) << endl;
-
-    cout << "PROBLEM 22\n";
-
-    float a12,b12;
-    cout<<"Sardor in cm.:";
-    cin>>a12;
-    cout<<"Mike in ft.:";
-    cin>>b12;
-    cout<<(b12*30.48>a12) << endl;
+    int N;
+    cin >> N;
+    cout << N << '^' << '1' << '=' << pow(N,1) << endl;
+    cout << N << '^' << '2' << '=' << pow(N,2) << endl;
+    cout << N << '^' << '3' << '=' << pow(N,3) << endl;
+    cout << N << '^' << '4' << '=' << pow(N,4) << endl;
+    cout << N << '^' << '5' << '=' << pow(N,5) << endl;
+    cout << N << '^' << '6' << '=' << pow(N,6) << endl;
+    cout << N << '^' << '7' << '=' << pow(N,7) << endl;
+    cout << N << '^' << '8' << '=' << pow(N,8) << endl;
+    cout << N << '^' << '9' << '=' << pow(N,9) << endl;
+    cout << N << '^' << "10" << '=' << pow(N,10) << endl;
 
     return 0;
 }
