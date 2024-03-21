@@ -38,16 +38,16 @@ int main() {
     cin >> p3_var1 >> p3_var2 >> p3_var3;
 
     if ((p3_var1>p3_var2)&&(p3_var1>p3_var3)){
-        cout<<p3_var1<<"  largest\n";
+        cout<<p3_var1<<" is largest\n";
 
     }
     else if((p3_var2>p1_var1)&&(p3_var2>p3_var3)){
 
-        cout<<p3_var2<<" largest\n";
+        cout<<p3_var2<<" is largest\n";
     }
         //at last if two previous numbers did not meet condition. the largest is third and we print it in the last else block
     else{
-        cout<<p3_var3<<" largest\n";
+        cout<<p3_var3<<" is largest\n";
     }
 
     cout << "PROBLEM 4\n";
